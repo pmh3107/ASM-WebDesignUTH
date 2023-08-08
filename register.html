@@ -20,13 +20,82 @@
     <link rel="icon" href="assets/image\favicon\android-icon-36x36.png" />
     <!-- Link css -->
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Tinos:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
       .container {
+        display: flex;
+        justify-content: center;
         width: 1110px;
         height: 100vh;
         max-width: calc(100% - 48px);
         margin-left: auto;
         margin-right: auto;
+        font-family: "Lato", sans-serif;
+        font-family: "Tinos", serif;
+      }
+      h1 {
+        padding: 20px 0 10px;
+        font-size: 30px;
+      }
+      h2 {
+        margin: 10px 2px 5px;
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+        margin-right: 6px;
+      }
+      #input-box {
+        width: 340px;
+        height: 25px;
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+      #Note-box {
+        width: 340px;
+        height: 70px;
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+      .container-check {
+        width: 340px;
+        height: 40px;
+        border-radius: 5px;
+        padding: 1px 2px;
+        border: 1px solid black;
+      }
+      .container-select {
+        padding: 1px 2px;
+        border: 1px solid black;
+        width: 345px;
+        height: 40px;
+        border-radius: 5px;
+      }
+      .container button {
+        display: block;
+        margin: 20px 0;
+        width: 100px;
+        height: 40px;
+        border-radius: 999px;
+        border: none;
+        background-color: #484848;
+        background-image: linear-gradient(
+          90deg,
+          #484848 0%,
+          #bebebe 50%,
+          #484848 100%
+        );
+      }
+      .container button:hover {
+        opacity: 0.5;
+      }
+      .container .container-check {
+        display: flex;
       }
     </style>
   </head>
@@ -149,65 +218,89 @@
       </header>
       <!-- container -->
       <div class="container">
-        <h1>ĐĂNG KÝ THÀNH VIÊN</h1>
-        <p>Mã sinh viên</p>
-        <input type="text" name="msv" id="" />
-        <p>Họ và tên</p>
-        <input type="text" name="msv" id="" />
-        <p>Email</p>
-        <input type="text" name="msv" id="" />
-        <p>Giới tính</p>
-        <input type="checkbox" name="" id="" />Nam
-        <input type="checkbox" name="" id="" />Nữ
-      </div>
-
-      <!-- footer -->
-      <footer id="footer">
-        <a class="footer-back-top" href="#"
-          ><button>Trở về đầu trang</button></a
-        >
-        <div class="footer">
-          <div class="footer-lefft">
-            <p class="footer-title">
-              CÔNG TY TNHH KẾT NÔI TRUYỀN THÔNG QUẢNG CÁO DU LỊCH VIỆT NAM
-            </p>
-            <p>
-              Giấy phép số 06/GP-CBC do Cục Báo chí, Bộ TTTT cấp ngày 18.06.2018
-              <br />
-              Tổng Biên tập: PHAN MINH HIỂN
-            </p>
-            <p>
-              Địa chỉ liên hệ: <br />
-              Số 06, Phạm Văn Bạch, phường 15, quận Bình Thạnh, TP.HCM
-            </p>
+        <div class="register">
+          <h1>ĐĂNG KÝ THÀNH VIÊN</h1>
+          <h2>Mã sinh viên</h2>
+          <input type="text" name="msv" id="input-box" />
+          <h2>Họ và tên</h2>
+          <input type="text" name="msv" id="input-box" />
+          <h2>Email</h2>
+          <input type="text" name="msv" id="input-box" />
+          <h2>Giới tính</h2>
+          <div class="container-check">
+            <input type="checkbox" name="" id="" />
+            <p>Nam</p>
+            <input type="checkbox" name="" id="" />
+            <p>Nữ</p>
           </div>
-          <div class="footer-right">
-            <p>Thông tin liên hệ:</p>
-            <a href="https://www.facebook.com">
-              <i class="fa-brands fa-facebook"></i>
-              <p>https://www.facebook.com/cannangdulich</p>
-            </a>
-            <a href="https://twitter.com/home">
-              <i class="fa-brands fa-twitter"></i>
-              <p>https://twitter.com/camnangdulich</p>
-            </a>
-            <a href="camnangdulich@gmail.com">
-              <i class="fa-solid fa-envelope"></i>
-              <p>camnangdulich@gmail.com</p>
-            </a>
-
-            <a href="https://www.youtube.com">
-              <i class="fa-brands fa-youtube"></i>
-              <p>https://www.youtube.com/channel/cannangdulich</p>
-            </a>
-            <p>
-              Quảng cáo: <br />
-              (+84 24) 35353579 (online)<br />
-            </p>
-            <p>Đường dây nóng: 096 8383838 * Bạn đọc: (+84 24) 35353579</p>
+          <h2>Sở thích</h2>
+          <div class="container-check">
+            <input type="checkbox" name="" id="" />
+            <p>Đọc sách</p>
+            <input type="checkbox" name="" id="" />
+            <p>Du lịch</p>
+            <input type="checkbox" name="" id="" />
+            <p>Âm nhạc</p>
+            <input type="checkbox" name="" id="" />
+            <p>Ẩm thực</p>
+            <input type="checkbox" name="" id="" />
+            <p>Khác</p>
           </div>
+          <h2>Quốc tịch</h2>
+          <select id="Selection" class="container-select">
+            <option>Chọn vùng quốc gia</option>
+          </select>
+
+          <h2>Ghi chú</h2>
+          <input type="text" name="" id="Note-box" />
+          <button>Đăng ký</button>
         </div>
-      </footer>
+      </div>
     </div>
+    <!-- footer -->
+    <footer id="footer">
+      <a class="footer-back-top" href="#"><button>Trở về đầu trang</button></a>
+      <div class="footer">
+        <div class="footer-lefft">
+          <p class="footer-title">
+            CÔNG TY TNHH KẾT NÔI TRUYỀN THÔNG QUẢNG CÁO DU LỊCH VIỆT NAM
+          </p>
+          <p>
+            Giấy phép số 06/GP-CBC do Cục Báo chí, Bộ TTTT cấp ngày 18.06.2018
+            <br />
+            Tổng Biên tập: PHAN MINH HIỂN
+          </p>
+          <p>
+            Địa chỉ liên hệ: <br />
+            Số 06, Phạm Văn Bạch, phường 15, quận Bình Thạnh, TP.HCM
+          </p>
+        </div>
+        <div class="footer-right">
+          <p>Thông tin liên hệ:</p>
+          <a href="https://www.facebook.com">
+            <i class="fa-brands fa-facebook"></i>
+            <p>https://www.facebook.com/cannangdulich</p>
+          </a>
+          <a href="https://twitter.com/home">
+            <i class="fa-brands fa-twitter"></i>
+            <p>https://twitter.com/camnangdulich</p>
+          </a>
+          <a href="camnangdulich@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+            <p>camnangdulich@gmail.com</p>
+          </a>
+
+          <a href="https://www.youtube.com">
+            <i class="fa-brands fa-youtube"></i>
+            <p>https://www.youtube.com/channel/cannangdulich</p>
+          </a>
+          <p>
+            Quảng cáo: <br />
+            (+84 24) 35353579 (online)<br />
+          </p>
+          <p>Đường dây nóng: 096 8383838 * Bạn đọc: (+84 24) 35353579</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
