@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <title>HT-Cẩm nang du lịch</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link các icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- link icon title -->
+    <link
+      rel="stylesheet"
+      href="assets//fonts/fontawesome-free-6.4.0-web/css/all.min.css"
+    />
+    <link rel="icon" href="assets/image\favicon\android-icon-36x36.png" />
+    <!-- Link css -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Merriweather:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: rgb(225, 234, 240);
+      }
+      .container {
+        width: 1110px;
+        height: 100vh;
+        max-width: calc(100% - 48px);
+        margin-left: auto;
+        margin-right: auto;
+      }
+      h1 {
+        text-align: center;
+        font-size: 35px;
+        padding: 30px;
+        font-family: "Lato", sans-serif;
+        font-family: "Merriweather", serif;
+      }
+      .slideshow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 5px;
+      }
+      .slideshow > img {
+        display: block;
+        width: 700px;
+        height: 500px;
+        border-radius: 10px;
+      }
+      .container button {
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        color: #ddd;
+        background-color: rgba(133, 133, 133, 0.5);
+      }
+      h2 {
+        text-align: center;
+        font-size: 25px;
+        padding: 10px;
+        margin-bottom: 30px;
+        font-family: "Lato", sans-serif;
+        font-family: "Merriweather", serif;
+      }
+      .container button:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      .next-btn {
+        transform: translateX(-60px);
+      }
+      .pre-btn {
+        transform: translate(60px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <!-- Thanh công cụ -->
+      <header class="header">
+        <div class="grid header-hight">
+          <div class="header-navbar">
+            <ul class="header-navbar-list">
+              <li class="header-navbar-list-item">
+                <a href="index.html" class="header-navbar-list-item-link">
+                  Trang chủ
+                </a>
+              </li>
+              <li class="header-navbar-list-item">
+                <a href="index.html#local" class="header-navbar-list-item-link"
+                  >Địa điểm</a
+                >
+              </li>
+              <li class="header-navbar-list-item">
+                <a href="index.html#blog" class="header-navbar-list-item-link"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+            <!--begin search -->
+            <div class="header-navbar-search">
+              <input
+                class="header-navbar-search-input"
+                type="text"
+                placeholder="Tìm kiếm"
+              />
+              <button class="header-navbar-search-btn">
+                <i
+                  class="fa-solid fa-magnifying-glass"
+                  style="color: #ffffff"
+                ></i>
+              </button>
+            </div>
+            <!-- end search -->
+
+            <ul class="header-navbar-list">
+              <!-- begin thông báo -->
+              <li
+                class="header-navbar-list-item header-navbar-list-item-has-noti"
+              >
+                <a class="header-navbar-list-item-link">
+                  <i class="fa-solid fa-bell fa-beat"></i> Thông báo
+                </a>
+                <div class="header-noti">
+                  <!-- có thông báo -->
+                  <ul class="header-noti-list triangle-bottom">
+                    <li class="header-noti-item">
+                      <a href="Blog_PhuYen.html" class="header-noti-item-link">
+                        <img
+                          src="assets/image/Phu_Yen_blog1.png"
+                          alt="Phú Yên"
+                          class="header-noti-img"
+                        />
+                        <div class="header-noti-infor">
+                          <p class="header-noti-name">Blog Phú Yên</p>
+                          <p class="header-noti-author">
+                            Tác giả: Phan Minh Hiển
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="header-noti-item header-noti-item-viewed">
+                      <a href="Blog_TaPao.html" class="header-noti-item-link">
+                        <img
+                          src="assets/image/Ta_Pao_blog1.jpg"
+                          alt="Ta Pao"
+                          class="header-noti-img"
+                        />
+                        <div class="header-noti-infor">
+                          <p class="header-noti-name">Blog Ta Pao</p>
+                          <p class="header-noti-author">
+                            Tác giả: Nguyễn Bình Trọng
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <!-- không có thông báo -->
+                  <!-- <div class="header-noti-no-noti ">
+                                    <i class="fa-solid fa-comment-slash"></i>
+                                    <p class="header-noti-no-noti">Không có thông báo</p>
+                                </div> -->
+
+                  <footer class="header-noti-footer">
+                    <a href="" class="header-noti-footer-btn">Xem tất cả</a>
+                  </footer>
+                </div>
+              </li>
+              <!-- end thông báo -->
+              <!-- chưa đăng nhập -->
+              <li class="header-navbar-list-item">
+                <a
+                  href="login.html"
+                  class="header-navbar-list-item-link separate"
+                  >Đăng nhập</a
+                >
+              </li>
+              <li class="header-navbar-list-item">
+                <a href="register.html" class="header-navbar-list-item-link"
+                  >Đăng ký</a
+                >
+              </li>
+              <!-- đã đang nhập -->
+              <!-- <li class="header-navbar-list-item header-navbar-user">
+                            <img src="assets/image/avatar.jpg" alt="avatar" class="user-img">
+                            <span class="user-name">Nguyễn Bình Trọng</span>
+                            
+                            <div class="header-user-menu">
+                                <ul class="user-menu">
+                                    <li class="user-menu-item">
+                                        <a href="" class="">Tài khoản của tôi</a>
+                                    </li>
+                                    <li class="user-menu-item">
+                                        <a href="">Đăng xuất</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> -->
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- container -->
+      <div class="container">
+        <h1>BỘ SƯU TẬP ẢNH</h1>
+        <div class="slideshow">
+          <button id="previousBtn" class="pre-btn">Pre</button>
+          <img id="image" src="assets/image/Da_lat_blog1.jpg" />
+          <button id="nextBtn" class="next-btn">Next</button>
+        </div>
+        <h2 id="count">Hình ảnh: 1/20</h2>
+      </div>
+      <!-- footer -->
+      <footer id="footer">
+        <a class="footer-back-top" href="#"
+          ><button>Trở về đầu trang</button></a
+        >
+        <div class="footer">
+          <div class="footer-lefft">
+            <p class="footer-title">
+              CÔNG TY TNHH KẾT NÔI TRUYỀN THÔNG QUẢNG CÁO DU LỊCH VIỆT NAM
+            </p>
+            <p>
+              Giấy phép số 06/GP-CBC do Cục Báo chí, Bộ TTTT cấp ngày 18.06.2018
+              <br />
+              Tổng Biên tập: PHAN MINH HIỂN
+            </p>
+            <p>
+              Địa chỉ liên hệ: <br />
+              Số 06, Phạm Văn Bạch, phường 15, quận Bình Thạnh, TP.HCM
+            </p>
+          </div>
+          <div class="footer-right">
+            <p>Thông tin liên hệ:</p>
+            <a href="https://www.facebook.com">
+              <i class="fa-brands fa-facebook"></i>
+              <p>https://www.facebook.com/cannangdulich</p>
+            </a>
+            <a href="https://twitter.com/home">
+              <i class="fa-brands fa-twitter"></i>
+              <p>https://twitter.com/camnangdulich</p>
+            </a>
+            <a href="camnangdulich@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <p>camnangdulich@gmail.com</p>
+            </a>
+
+            <a href="https://www.youtube.com">
+              <i class="fa-brands fa-youtube"></i>
+              <p>https://www.youtube.com/channel/cannangdulich</p>
+            </a>
+            <p>
+              Quảng cáo: <br />
+              (+84 24) 35353579 (online)<br />
+            </p>
+            <p>Đường dây nóng: 096 8383838 * Bạn đọc: (+84 24) 35353579</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+
+  <script>
+    const images = [
+      "assets/image/Da_lat_blog1.jpg",
+      "assets/image/Da_lat_blog3.jpg",
+      "assets/image/Da_lat_blog4.jpg",
+      "assets/image/Ha-long-blog1.jpg",
+      "assets/image/Ha-long-blog2.jpg",
+      "assets/image/Ha-long-blog3.jpg",
+      "assets/image/Ha-long-blog4.jpg",
+      "assets/image/Hue_blog1.jpg",
+      "assets/image/Hue_blog2.png",
+      "assets/image/Hue_blog3.jpg",
+      "assets/image/Nha-Trang-blog1.jpg",
+      "assets/image/Nha-Trang-blog2.jpg",
+      "assets/image/Nha-Trang-blog3.jpg",
+      "assets/image/Phu_Yen_blog1.png",
+      "assets/image/Phu_Yen_blog4.jpg",
+      "assets/image/Phu_Yen_blog3.png",
+      "assets/image/Phu-Quoc-blog1.jpg",
+      "assets/image/Phu-Quoc-blog3.jpg",
+      "assets/image/Phu-Quoc-blog4.jpg",
+      "assets/image/Phu-Quoc-blog5.jpg",
+    ];
+    let currentIndex = 0;
+
+    const previousBtn = document.getElementById("previousBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const image = document.getElementById("image");
+
+    previousBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      image.src = images[currentIndex];
+      for (var i = 1; i < 2; i++) {
+        count = currentIndex + 1;
+        document.getElementById("count").innerHTML =
+          "Hình ảnh: " + count + "/20";
+      }
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      image.src = images[currentIndex];
+      for (var i = 1; i < 2; i++) {
+        count = currentIndex + i;
+        document.getElementById("count").innerHTML =
+          "Hình ảnh: " + count + "/20";
+      }
+    });
+  </script>
+</html>

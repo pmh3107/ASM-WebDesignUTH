@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>HT-Cẩm nang du lịch/ Hạ Long</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"/>
+
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css"> <!-- nhúng các icon -->
+    <link rel="icon" href="assets/image/favicon/android-icon-36x36.png">
+
+    <link rel="stylesheet" href="assets/css/Blog-style.css">
+    <!-- Background -->
+    <style>
+        .container-slide{
+            position: relative;
+            padding:10%;
+            background: url(assets/image/Ha-long-background.jpg) center/cover no-repeat;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Thanh công cụ -->
+    <div class="main">
+        <!-- Thanh công cụ -->
+        <header class="header">
+            <div class="grid header-hight" >
+                <div class="header-navbar">
+                    <ul class="header-navbar-list">
+                        <li class="header-navbar-list-item">
+                            <a href="index.html" class="header-navbar-list-item-link">
+                                Trang chủ
+                            </a>
+                        </li>
+                        <!-- <li class="header-navbar-list-item">
+                            <a href="#local" class="header-navbar-list-item-link">Địa điểm</a>
+                        </li> -->
+                        <li class="header-navbar-list-item">
+                            <a href="#blog" class="header-navbar-list-item-link">Blog</a>
+                        </li>
+                    </ul>
+        
+                    <!--begin search -->
+                        <div class="header-navbar-search">
+                            <input class="header-navbar-search-input" type="text" placeholder="Tìm kiếm">
+                            <button class="header-navbar-search-btn">
+                                <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                            </button>
+                        </div>
+                    <!-- end search -->
+        
+                    <ul class="header-navbar-list">
+                        <!-- begin thông báo -->
+                        <li class="header-navbar-list-item header-navbar-list-item-has-noti">
+                            <a href="" class="header-navbar-list-item-link">
+                                <i class="fa-solid fa-bell fa-beat"></i>
+                            </a>
+                            <div class="header-noti">
+                                <ul class="header-noti-list triangle-bottom">
+                                    <li class="header-noti-item">
+                                        <a href="Blog_PhuYen.html" class="header-noti-item-link">
+                                            <img src="assets/image/Phu_Yen_blog1.png" alt="Phú Yên" class="header-noti-img">
+                                            <div class="header-noti-infor">
+                                                <p class="header-noti-name">Blog Phú Yên</p>
+                                                <p class="header-noti-author">Tác giả: Phan Minh Hiển</p>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="header-noti-item header-noti-item-viewed">
+                                        <a href="Blog_TaPao.html" class="header-noti-item-link">
+                                            <img src="assets/image/Ta_Pao_blog1.jpg" alt="Ta Pao" class="header-noti-img">
+                                            <div class="header-noti-infor">
+                                                <p class="header-noti-name">Blog Ta Pao</p>
+                                                <p class="header-noti-author">Tác giả: Nguyễn Bình Trọng</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="header-noti-footer">
+                                    <a href="" class="header-noti-footer-btn">Xem tất cả</a>
+                                </footer>
+                            </div>
+                        </li>
+                        <!-- end thông báo -->
+
+                        <!-- chưa đăng nhập -->
+                        <li class="header-navbar-list-item">
+                            <a href="" class="header-navbar-list-item-link separate">Đăng nhập</a>
+                            
+                        </li>
+                        <li class="header-navbar-list-item">
+                            <a href="" class="header-navbar-list-item-link">Đăng ký</a>
+                        </li>
+
+                        <!-- đã đang nhập -->
+                        <!-- <li class="header-navbar-list-item header-navbar-user">
+                            <img src="assets/image/avatar.jpg" alt="avatar" class="user-img">
+                            <span class="user-name">Nguyễn Bình Trọng</span>
+                            
+                            <div class="header-user-menu">
+                                <ul class="user-menu">
+                                    <li class="user-menu-item">
+                                        <a href="" class="">Tài khoản của tôi</a>
+                                    </li>
+                                    <li class="user-menu-item">
+                                        <a href="">Đăng xuất</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>  
+        </header>
+
+              <!-- container -->
+        <div class="container ">
+            <div class="container-slide">
+                <div class="container-slide-transbox">
+                   <p>Hạ Long</p>
+                </div>
+            </div>
+          </div>
+          <!-- hết container -->
+          <div class="container-blog-row">
+            <div class="container-blog-leftcol" id="blog">
+                <p>BLOG: Hạ Long - Hành trình khám phá Vịnh Hạ Long</p>
+                <div class="card-blogs">
+                    <img src="assets/image/Ha-long-blog0.jpg" alt="Hạ Long" />
+                    <p>
+                      Hạ Long là thành phố nằm ở tỉnh Quảng Ninh, miền Bắc Việt Nam. Với vẻ đẹp thiên nhiên tuyệt vời và danh sách Di sản thế giới của UNESCO, Vịnh Hạ Long hấp dẫn du khách từ khắp nơi trên thế giới để khám phá những hòn đảo, hang động và cảnh quan độc đáo của nó.
+                    </p>
+                    <img src="assets/image/Ha-long-blog1.jpg" alt="Hòn Trống Mái" />
+                    <p>
+                      Một trong những điểm đến nổi tiếng ở Hạ Long là Hòn Trống Mái, một hòn đảo có hình dạng giống như một cái trống đầu tròn và đỉnh cao. Du khách có thể ngắm cảnh từ đỉnh đảo, tham gia các hoạt động như đi thuyền kayak và tắm biển tại bãi tắm gần đó.
+                    </p>
+                    <img src="assets/image/Ha-long-blog2.jpg" alt="Hang Đầu Gỗ" />
+                    <p>
+                      Hang Đầu Gỗ là một trong những hang động nổi tiếng tại Vịnh Hạ Long. Với kiến trúc độc đáo và các hình thù đá phong phú, du khách có thể tham quan và khám phá các khu vực trong hang để chiêm ngưỡng sự tuyệt vời của tự nhiên.
+                    </p>
+                    <img src="assets/image/Ha-long-blog3.jpg" alt="Đảo Tuần Châu" />
+                    <p>
+                      Đảo Tuần Châu là một điểm đến phổ biến khác ở Hạ Long. Với bãi biển tuyệt đẹp và các khu nghỉ dưỡng sang trọng, du khách có thể thư giãn trên bãi cát, tắm nắng, tham gia các hoạt động thể thao nước và thưởng thức ẩm thực địa phương.
+                    </p>
+                    <img src="assets/image/Ha-long-blog4.jpg" alt="Bãi Cháy" />
+                    <p>
+                      Bãi Cháy là một khu du lịch nổi tiếng ở Hạ Long, nơi du khách có thể tận hưởng không gian biển xanh mát và tham gia vào các hoạt động như lướt sóng, đi thuyền, hay thưởng thức các món hải sản tươi ngon.
+                    </p>
+                </div>
+            </div>
+            <div class="container-blog-rightcol">
+                <div class="card-video">
+                    <h3>GIỚI THIỆU</h3>
+                    <iframe class="card-video-iframe" src="assets/video/VIET-NAM.mp4" frameborder="0"></iframe>
+                </div>
+                <div class="card-hot-blog">
+                    <p class="card-hot-blog-title">BLOG NỔI BẬT</p>
+                    <ul class="hot-blog-list">
+                        <li class="hot-blog-item">
+                            <a href="" class="hot-blog-item-link">
+                                <p>Đà Lạt - Thành phố của Sương mù và Hoa</p>
+                            </a>
+                        </li>
+                        <li class="hot-blog-item">
+                            <a href="" class="hot-blog-item-link">
+                                <p>Phú Yên - Thiên đường biển hoang sơ</p>
+                            </a>
+                        </li>
+                        <li class="hot-blog-item">
+                            <a href="" class="hot-blog-item-link">
+                                <p>Huế - Di sản văn hóa thế giới</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- footer -->
+    <footer id="footer">
+        <a class="footer-back-top" href="#"><button>Trở về đầu trang</button></a>
+        <div class="footer">
+            <div class="footer-lefft">
+                <p class="footer-title">CÔNG TY TNHH KẾT NÔI TRUYỀN THÔNG QUẢNG CÁO DU LỊCH VIỆT NAM</p>
+                <p>Giấy phép số 06/GP-CBC do Cục Báo chí, Bộ TTTT cấp ngày 18.06.2018 <br/>
+                    Tổng Biên tập: PHAN MINH HIỂN</p>
+                <p>Địa chỉ liên hệ: <br/>
+                    Số 06, Phạm Văn Bạch, phường 15, quận Bình Thạnh, TP.HCM</p>
+            </div>
+            <div class="footer-right">
+                <p>Thông tin liên hệ:</p>
+                <a href="https://www.facebook.com" >
+                    <i class="fa-brands fa-facebook"></i>
+                    <p>https://www.facebook.com/cannangdulich</p>
+                    
+                </a>
+                <a href="https://twitter.com/home">
+                    <i class="fa-brands fa-twitter"></i>
+                    <p>https://twitter.com/camnangdulich</p>
+                </a>
+                <a href="camnangdulich@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>camnangdulich@gmail.com</p>
+                </a>
+                
+                <a href="https://www.youtube.com">
+                    <i class="fa-brands fa-youtube"></i>
+                    <p>https://www.youtube.com/channel/cannangdulich</p>
+                </a>
+                <p>
+                    Quảng cáo: <br/>
+                    (+84 24) 35353579 (online)<br/>
+                </p>
+                <p>Đường dây nóng: 096 8383838 * Bạn đọc: (+84 24) 35353579</p>
+            </div>
+        </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>HT-Cẩm nang du lịch/ Phú yên</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"/>
+
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css"> <!-- nhúng các icon -->
+    <link rel="icon" href="assets/image/favicon/android-icon-36x36.png">
+
+    <link rel="stylesheet" href="assets/css/Blog-style.css">
+    <!-- background -->
+    <style>
+        .container-slide{
+            position: relative;
+            padding:10%;
+            background: url(assets/image/Phu_Yen_background.jpg) center/cover no-repeat;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Thanh công cụ -->
+    <div class="main">
+        <!-- Thanh công cụ -->
+        <header class="header">
+            <div class="grid header-hight" >
+                <div class="header-navbar">
+                    <ul class="header-navbar-list">
+                        <li class="header-navbar-list-item">
+                            <a href="index.html" class="header-navbar-list-item-link">
+                                Trang chủ
+                            </a>
+                        </li>
+                        <!-- <li class="header-navbar-list-item">
+                            <a href="#local" class="header-navbar-list-item-link">Địa điểm</a>
+                        </li> -->
+                        <li class="header-navbar-list-item">
+                            <a href="#blog" class="header-navbar-list-item-link">Blog</a>
+                        </li>
+                    </ul>
+        
+                    <!--begin search -->
+                        <div class="header-navbar-search">
+                            <input class="header-navbar-search-input" type="text" placeholder="Tìm kiếm">
+                            <button class="header-navbar-search-btn">
+                                <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                            </button>
+                        </div>
+                    <!-- end search -->
+        
+                    <ul class="header-navbar-list">
+                        <!-- begin thông báo -->
+                        <li class="header-navbar-list-item header-navbar-list-item-has-noti">
+                            <a href="" class="header-navbar-list-item-link">
+                                <i class="fa-solid fa-bell fa-beat"></i>
+                            </a>
+                            <div class="header-noti">
+                                <ul class="header-noti-list triangle-bottom">
+                                    <li class="header-noti-item">
+                                        <a href="Blog_PhuYen.html" class="header-noti-item-link">
+                                            <img src="assets/image/Phu_Yen_blog1.png" alt="Phú Yên" class="header-noti-img">
+                                            <div class="header-noti-infor">
+                                                <p class="header-noti-name">Blog Phú Yên</p>
+                                                <p class="header-noti-author">Tác giả: Phan Minh Hiển</p>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="header-noti-item header-noti-item-viewed">
+                                        <a href="Blog_TaPao.html" class="header-noti-item-link">
+                                            <img src="assets/image/Ta_Pao_blog1.jpg" alt="Ta Pao" class="header-noti-img">
+                                            <div class="header-noti-infor">
+                                                <p class="header-noti-name">Blog Ta Pao</p>
+                                                <p class="header-noti-author">Tác giả: Nguyễn Bình Trọng</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="header-noti-footer">
+                                    <a href="" class="header-noti-footer-btn">Xem tất cả</a>
+                                </footer>
+                            </div>
+                        </li>
+                        <!-- end thông báo -->
+
+                        <!-- chưa đăng nhập -->
+                        <li class="header-navbar-list-item">
+                            <a href="" class="header-navbar-list-item-link separate">Đăng nhập</a>
+                            
+                        </li>
+                        <li class="header-navbar-list-item">
+                            <a href="" class="header-navbar-list-item-link">Đăng ký</a>
+                        </li>
+
+                        <!-- đã đang nhập -->
+                        <!-- <li class="header-navbar-list-item header-navbar-user">
+                            <img src="assets/image/avatar.jpg" alt="avatar" class="user-img">
+                            <span class="user-name">Nguyễn Bình Trọng</span>
+                            
+                            <div class="header-user-menu">
+                                <ul class="user-menu">
+                                    <li class="user-menu-item">
+                                        <a href="" class="">Tài khoản của tôi</a>
+                                    </li>
+                                    <li class="user-menu-item">
+                                        <a href="">Đăng xuất</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>  
+        </header>
+
+              <!-- container -->
+        <div class="container ">
+            <div class="container-slide">
+                <div class="container-slide-transbox">
+                   <p>Phú Yên</p>
+                </div>
+            </div>
+          </div>
+          <!-- hết container -->
+          <div class="container-blog-row">
+            <div class="container-blog-leftcol" id="blog">
+                <p>BLOG: Phú Yên - Thiên đường biển hoang sơ</p>
+                <div class="card-blogs">
+                  <img src="assets/image\Phu_Yen_blog1.png" alt="Phú Yên" />
+                  <p>
+                    Phú Yên, thành phố nằm ở miền Trung Việt Nam, là một điểm đến thú vị cho những người yêu biển và thiên nhiên hoang sơ. Với bờ biển dài, cát trắng mịn và nước biển trong xanh, Phú Yên hứa hẹn mang đến những trải nghiệm đáng nhớ.
+                  </p>
+                  <img src="assets/image/Phu_Yen_blog2.jpg" alt="Bãi Xép" />
+                  <p>
+                    Một trong những địa điểm nổi tiếng ở Phú Yên là Bãi Xép, một bãi biển đẹp hoang sơ và yên tĩnh. Du khách có thể thả mình vào biển, thưởng thức cảnh quan tuyệt đẹp và tận hưởng không khí trong lành của vùng biển Phú Yên.
+                  </p>
+                  <img src="assets/image\Phu_Yen_blog3.png" alt="Gành Đá Dĩa" />
+                  <p>
+                    Gành Đá Dĩa là một địa điểm du lịch nổi tiếng khác ở Phú Yên. Đây là một kỳ quan thiên nhiên với hàng nghìn tảng đá đen hình sấm chồng lên nhau, tạo thành một cảnh quan độc đáo và ấn tượng.
+                  </p>
+                  <img src="assets/image\Phu_Yen_blog4.jpg" alt="Đảo Mũi Điện" />
+                  <p>
+                    Du khách cũng không nên bỏ qua việc tham quan Đảo Mũi Điện, một hòn đảo nhỏ và hoang sơ nằm ở vịnh Vũng Rô. Đây là một điểm đến lý tưởng để tận hưởng không gian yên bình, ngắm cảnh biển và tham gia các hoạt động như lặn biển và câu cá.
+                  </p> 
+                </div>
+            </div>
+            <div class="container-blog-rightcol">
+                <div class="card-video">
+                    <h3>GIỚI THIỆU</h3>
+                    <iframe class="card-video-iframe" src="assets/video/VIET-NAM.mp4" frameborder="0"></iframe>
+                </div>
+                <div class="card-hot-blog">
+                    <p class="card-hot-blog-title">BLOG NỔI BẬT</p>
+                    <ul class="hot-blog-list">
+                        <li class="hot-blog-item">
+                            <a href="" class="hot-blog-item-link">
+                                <p>Đà Lạt - Thành phố của Sương mù và Hoa</p>
+                            </a>
+                        </li>
+                        <li class="hot-blog-item">
+                            <a href="" class="hot-blog-item-link">
+                                <p>Phú Yên - Thiên đường biển hoang sơ</p>
+                            </a>
+                        </li>
+                        <li class="hot-blog-item">
+                            <a href="" class="hot-blog-item-link">
+                                <p>Huế - Di sản văn hóa thế giới</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- footer -->
+    <footer id="footer">
+        <a class="footer-back-top" href="#"><button>Trở về đầu trang</button></a>
+        <div class="footer">
+            <div class="footer-lefft">
+                <p class="footer-title">CÔNG TY TNHH KẾT NÔI TRUYỀN THÔNG QUẢNG CÁO DU LỊCH VIỆT NAM</p>
+                <p>Giấy phép số 06/GP-CBC do Cục Báo chí, Bộ TTTT cấp ngày 18.06.2018 <br/>
+                    Tổng Biên tập: PHAN MINH HIỂN</p>
+                <p>Địa chỉ liên hệ: <br/>
+                    Số 06, Phạm Văn Bạch, phường 15, quận Bình Thạnh, TP.HCM</p>
+            </div>
+            <div class="footer-right">
+                <p>Thông tin liên hệ:</p>
+                <a href="https://www.facebook.com" >
+                    <i class="fa-brands fa-facebook"></i>
+                    <p>https://www.facebook.com/cannangdulich</p>
+                    
+                </a>
+                <a href="https://twitter.com/home">
+                    <i class="fa-brands fa-twitter"></i>
+                    <p>https://twitter.com/camnangdulich</p>
+                </a>
+                <a href="camnangdulich@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>camnangdulich@gmail.com</p>
+                </a>
+                
+                <a href="https://www.youtube.com">
+                    <i class="fa-brands fa-youtube"></i>
+                    <p>https://www.youtube.com/channel/cannangdulich</p>
+                </a>
+                <p>
+                    Quảng cáo: <br/>
+                    (+84 24) 35353579 (online)<br/>
+                </p>
+                <p>Đường dây nóng: 096 8383838 * Bạn đọc: (+84 24) 35353579</p>
+            </div>
+        </div>
+    </footer>
+  </div>
+</body>
+</html>

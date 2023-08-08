@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>HT-Cẩm nang du lịch/ Nha Trang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"/>
+
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.4.0-web/css/all.min.css"> <!-- nhúng các icon -->
+    <link rel="icon" href="assets/image/favicon/android-icon-36x36.png">
+
+    <link rel="stylesheet" href="assets/css/Blog-style.css">
+    <!-- Background -->
+    <style>
+        .container-slide{
+            position: relative;
+            padding:10%;
+            background: url(assets/image/Nha-Trang-background.jpg) center/cover no-repeat;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Thanh công cụ -->
+    <div class="main">
+        <!-- Thanh công cụ -->
+        <header class="header">
+            <div class="grid header-hight" >
+                <div class="header-navbar">
+                    <ul class="header-navbar-list">
+                        <li class="header-navbar-list-item">
+                            <a href="index.html" class="header-navbar-list-item-link">
+                                Trang chủ
+                            </a>
+                        </li>
+                        <!-- <li class="header-navbar-list-item">
+                            <a href="#local" class="header-navbar-list-item-link">Địa điểm</a>
+                        </li> -->
+                        <li class="header-navbar-list-item">
+                            <a href="#blog" class="header-navbar-list-item-link">Blog</a>
+                        </li>
+                    </ul>
+        
+                    <!--begin search -->
+                        <div class="header-navbar-search">
+                            <input class="header-navbar-search-input" type="text" placeholder="Tìm kiếm">
+                            <button class="header-navbar-search-btn">
+                                <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                            </button>
+                        </div>
+                    <!-- end search -->
+        
+                    <ul class="header-navbar-list">
+                        <!-- begin thông báo -->
+                        <li class="header-navbar-list-item header-navbar-list-item-has-noti">
+                            <a href="" class="header-navbar-list-item-link">
+                                <i class="fa-solid fa-bell fa-beat"></i>
+                            </a>
+                            <div class="header-noti">
+                                <ul class="header-noti-list triangle-bottom">
+                                    <li class="header-noti-item">
+                                        <a href="Blog_PhuYen.html" class="header-noti-item-link">
+                                            <img src="assets/image/Phu_Yen_blog1.png" alt="Phú Yên" class="header-noti-img">
+                                            <div class="header-noti-infor">
+                                                <p class="header-noti-name">Blog Phú Yên</p>
+                                                <p class="header-noti-author">Tác giả: Phan Minh Hiển</p>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="header-noti-item header-noti-item-viewed">
+                                        <a href="Blog_TaPao.html" class="header-noti-item-link">
+                                            <img src="assets/image/Ta_Pao_blog1.jpg" alt="Ta Pao" class="header-noti-img">
+                                            <div class="header-noti-infor">
+                                                <p class="header-noti-name">Blog Ta Pao</p>
+                                                <p class="header-noti-author">Tác giả: Nguyễn Bình Trọng</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="header-noti-footer">
+                                    <a href="" class="header-noti-footer-btn">Xem tất cả</a>
+                                </footer>
+                            </div>
+                        </li>
+                        <!-- end thông báo -->
+
+                        <!-- chưa đăng nhập -->
+                        <li class="header-navbar-list-item">
+                            <a href="" class="header-navbar-list-item-link separate">Đăng nhập</a>
+                            
+                        </li>
+                        <li class="header-navbar-list-item">
+                            <a href="" class="header-navbar-list-item-link">Đăng ký</a>
+                        </li>
+
+                        <!-- đã đang nhập -->
+                        <!-- <li class="header-navbar-list-item header-navbar-user">
+                            <img src="assets/image/avatar.jpg" alt="avatar" class="user-img">
+                            <span class="user-name">Nguyễn Bình Trọng</span>
+                            
+                            <div class="header-user-menu">
+                                <ul class="user-menu">
+                                    <li class="user-menu-item">
+                                        <a href="" class="">Tài khoản của tôi</a>
+                                    </li>
+                                    <li class="user-menu-item">
+                                        <a href="">Đăng xuất</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>  
+        </header>
+
+              <!-- container -->
+        <div class="container ">
+            <div class="container-slide">
+                <div class="container-slide-transbox">
+                   <p>Nha Trang</p>
+                </div>
+            </div>
+          </div>
+          <!-- hết container -->
+          <div class="container-blog-row">
+            <div class="container-blog-leftcol" id="blog">
+                <p>BLOG: Nha Trang - Thiên đường biển xanh</p>
+                <div class="card-blogs">
+                    <img src="assets/image/Nha-Trang-blog1.jpg" alt="Nha Trang" />
+                    <p>
+                      Nha Trang là thành phố du lịch nằm ở miền Trung Việt Nam, với bờ biển xanh mát và cát trắng mịn. Với vẻ đẹp tự nhiên tuyệt vời và các điểm tham quan hấp dẫn, Nha Trang là điểm đến lý tưởng cho những người yêu biển và muốn tận hưởng kỳ nghỉ nghỉ dưỡng tuyệt vời.
+                    </p>
+                    <img src="assets/image/Nha-Trang-blog2.jpg" alt="Bãi Dài" />
+                    <p>
+                      Một trong những bãi biển nổi tiếng ở Nha Trang là Bãi Dài. Với cát trắng mịn, nước biển trong xanh và không gian yên tĩnh, du khách có thể thả mình vào biển, tắm nắng hoặc tham gia các hoạt động như lướt ván, lặn biển và câu cá.
+                    </p>
+                    <img src="assets/image/Nha-Trang-blog3.jpg" alt="Vinpearl Land" />
+                    <p>
+                      Vinpearl Land là một công viên giải trí nổi tiếng ở Nha Trang. Với các trò chơi điện tử, khu vui chơi nước, rạp chiếu phim và cảnh quan đẹp, Vinpearl Land là nơi lý tưởng cho gia đình và nhóm bạn thưởng thức những giây phút vui vẻ và thú vị.
+                    </p>
+                    <img src="assets/image/Nha-Trang-blog4.jpg" alt="Tháp Bà Ponagar" />
+                    <p>
+                      Tháp Bà Ponagar là một di tích lịch sử quan trọng ở Nha Trang. Được xây dựng từ thế kỷ 8, tháp chùa này là một nơi tôn nghiêm và linh thiêng, thu hút du khách và những người muốn tìm hiểu về văn hóa và tín ngưỡng dân tộc Chăm.
+                    </p>
+                    <img src="assets/image/Nha-Trang-blog5.jpg" alt="Hòn Mun" />
+                    <p>
+                      Hòn Mun là một hòn đảo nhỏ nằm gần bờ biển Nha Trang. Với đáy biển phong phú và đa dạng sinh học, Hòn Mun là một điểm đến lý tưởng cho những người yêu thích lặn biển và muốn khám phá đại dương với vẻ đẹp độc đáo.
+                    </p>
+                </div>
+            </div>
+            <div class="container-blog-rightcol">
+                <div class="card-video">
+                    <h3>GIỚI THIỆU</h3>
+                    <iframe class="card-video-iframe" src="assets/video/VIET-NAM.mp4" frameborder="0"></iframe>
+                </div>
+                <div class="card-hot-blog">
+                    <p class="card-hot-blog-title">BLOG NỔI BẬT</p>
+                    <ul class="hot-blog-list">
+                        <li class="hot-blog-item">
+                            <a href="" class="hot-blog-item-link">
+                                <p>Đà Lạt - Thành phố của Sương mù và Hoa</p>
+                            </a>
+                        </li>
+                        <li class="hot-blog-item">
+                            <a href="" class="hot-blog-item-link">
+                                <p>Phú Yên - Thiên đường biển hoang sơ</p>
+                            </a>
+                        </li>
+                        <li class="hot-blog-item">
+                            <a href="" class="hot-blog-item-link">
+                                <p>Huế - Di sản văn hóa thế giới</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- footer -->
+    <footer id="footer">
+        <a class="footer-back-top" href="#"><button>Trở về đầu trang</button></a>
+        <div class="footer">
+            <div class="footer-lefft">
+                <p class="footer-title">CÔNG TY TNHH KẾT NÔI TRUYỀN THÔNG QUẢNG CÁO DU LỊCH VIỆT NAM</p>
+                <p>Giấy phép số 06/GP-CBC do Cục Báo chí, Bộ TTTT cấp ngày 18.06.2018 <br/>
+                    Tổng Biên tập: PHAN MINH HIỂN</p>
+                <p>Địa chỉ liên hệ: <br/>
+                    Số 06, Phạm Văn Bạch, phường 15, quận Bình Thạnh, TP.HCM</p>
+            </div>
+            <div class="footer-right">
+                <p>Thông tin liên hệ:</p>
+                <a href="https://www.facebook.com" >
+                    <i class="fa-brands fa-facebook"></i>
+                    <p>https://www.facebook.com/cannangdulich</p>
+                    
+                </a>
+                <a href="https://twitter.com/home">
+                    <i class="fa-brands fa-twitter"></i>
+                    <p>https://twitter.com/camnangdulich</p>
+                </a>
+                <a href="camnangdulich@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>camnangdulich@gmail.com</p>
+                </a>
+                
+                <a href="https://www.youtube.com">
+                    <i class="fa-brands fa-youtube"></i>
+                    <p>https://www.youtube.com/channel/cannangdulich</p>
+                </a>
+                <p>
+                    Quảng cáo: <br/>
+                    (+84 24) 35353579 (online)<br/>
+                </p>
+                <p>Đường dây nóng: 096 8383838 * Bạn đọc: (+84 24) 35353579</p>
+            </div>
+        </div>
+    </footer>
+  </div>
+</body>
+</html>
