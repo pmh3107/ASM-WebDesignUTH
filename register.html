@@ -50,7 +50,7 @@
         font-size: 13px;
         margin-right: 6px;
       }
-      #input-box {
+      .input-box {
         width: 340px;
         height: 25px;
         border: 1px solid black;
@@ -221,11 +221,11 @@
         <div class="register">
           <h1>ĐĂNG KÝ THÀNH VIÊN</h1>
           <h2>Mã sinh viên</h2>
-          <input type="text" name="msv" id="input-box" />
+          <input type="text" name="msv" id="spec-infor-1" class="input-box" />
           <h2>Họ và tên</h2>
-          <input type="text" name="msv" id="input-box" />
+          <input type="text" name="msv" id="spec-infor-2" class="input-box" />
           <h2>Email</h2>
-          <input type="text" name="msv" id="input-box" />
+          <input type="text" name="msv" id="spec-infor-3" class="input-box" />
           <h2>Giới tính</h2>
           <div class="container-check">
             <input type="checkbox" name="" id="" />
@@ -253,7 +253,7 @@
 
           <h2>Ghi chú</h2>
           <input type="text" name="" id="Note-box" />
-          <button>Đăng ký</button>
+          <button onclick="notnull()">Đăng ký</button>
         </div>
       </div>
     </div>
@@ -303,4 +303,56 @@
       </div>
     </footer>
   </body>
+  <script>
+    function notnull111() {
+      var msv = document.getElementById("spec-infor-1").value.trim();
+      var name = document.getElementById("spec-infor-2").value.trim();
+      var email = document.getElementById("spec-infor-3").value.trim();
+      var arr = "Mã sinh viên không được để trống !!!";
+      var valid = true;
+      if (msv == "") {
+        document
+          .getElementById("spec-infor-1")
+          .setAttribute("style", "border: 2px solid yellow;");
+        alert("Mã số sinh viên không được để trống !!!");
+        return false;
+      }
+      if (name == "") {
+        document
+          .getElementById("spec-infor-2")
+          .setAttribute("style", "border: 2px solid yellow;");
+        alert("Họ và tên không được để trống !!!");
+        return false;
+      }
+      if (email == "") {
+        document
+          .getElementById("spec-infor-2")
+          .setAttribute("style", "border: 2px solid yellow;");
+        alert("Email không được để trống !!!");
+      }
+      return valid;
+    }
+    function notnull() {
+      var ids = ["spec-infor-1", "spec-infor-2", "spec-infor-3"]; // Mảng lưu trữ các id của các input
+      var messages = [
+        "Mã sinh viên không được để trống !!!",
+        "Họ tên không được để trống !!!",
+        "Email không được để trống !!!",
+      ]; // Mảng lưu trữ các thông báo lỗi tương ứng
+      var valid = true; // Biến lưu kết quả của việc kiểm tra các input
+      for (var i = 0; i < ids.length; i++) {
+        // Vòng lặp for duyệt qua các id
+        var input = document.getElementById(ids[i]); // Lấy input theo id
+        if (input.value.trim() == "") {
+          // Kiểm tra xem input có để trống hay không
+          input.style.border = "2px solid yellow"; // Thiết lập màu nền cho input là vàng
+          alert(messages[i]); // Hiển thị thông báo lỗi
+          valid = false; // Đặt biến valid thành false
+        } else {
+          input.style.border = "1px solid black";
+        }
+      }
+      return valid; //Trả về biến valid
+    }
+  </script>
 </html>
