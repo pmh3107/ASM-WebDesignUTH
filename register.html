@@ -56,11 +56,15 @@
         border: 1px solid black;
         border-radius: 5px;
       }
-      #Note-box {
+      .Note-box-style > textarea {
+        border-radius: 5px;
+        font-size: 15px;
+        border: 1px solid black;
         width: 340px;
         height: 70px;
-        border: 1px solid black;
-        border-radius: 5px;
+        overflow-y: scroll;
+        font-family: "Lato", sans-serif;
+        font-family: "Tinos", serif;
       }
       .container-check {
         width: 340px;
@@ -68,6 +72,10 @@
         border-radius: 5px;
         padding: 1px 2px;
         border: 1px solid black;
+      }
+      .Note-box-style > p {
+        margin: 0;
+        padding-left: 270px;
       }
       .container-select {
         padding: 1px 2px;
@@ -221,39 +229,65 @@
         <div class="register">
           <h1>ĐĂNG KÝ THÀNH VIÊN</h1>
           <h2>Mã sinh viên</h2>
-          <input type="text" name="msv" id="spec-infor-1" class="input-box" />
+          <input
+            type="text"
+            name="msv"
+            id="spec-infor-1"
+            class="input-box"
+            onclick=""
+          />
           <h2>Họ và tên</h2>
           <input type="text" name="msv" id="spec-infor-2" class="input-box" />
           <h2>Email</h2>
           <input type="text" name="msv" id="spec-infor-3" class="input-box" />
           <h2>Giới tính</h2>
-          <div class="container-check">
-            <input type="checkbox" name="" id="" />
+          <div class="container-check" id="sex">
+            <input type="checkbox" name="" id="check-box-Na" />
             <p>Nam</p>
-            <input type="checkbox" name="" id="" />
+            <input type="checkbox" name="" id="check-box-Nu" />
             <p>Nữ</p>
           </div>
           <h2>Sở thích</h2>
-          <div class="container-check">
-            <input type="checkbox" name="" id="" />
+          <div class="container-check" id="hobby">
+            <input type="checkbox" name="" id="check-1" />
             <p>Đọc sách</p>
-            <input type="checkbox" name="" id="" />
+            <input type="checkbox" name="" id="check-2" />
             <p>Du lịch</p>
-            <input type="checkbox" name="" id="" />
+            <input type="checkbox" name="" id="check-3" />
             <p>Âm nhạc</p>
-            <input type="checkbox" name="" id="" />
+            <input type="checkbox" name="" id="check-4" />
             <p>Ẩm thực</p>
-            <input type="checkbox" name="" id="" />
+            <input type="checkbox" name="" id="check-5" />
             <p>Khác</p>
           </div>
           <h2>Quốc tịch</h2>
           <select id="Selection" class="container-select">
-            <option>Chọn vùng quốc gia</option>
+            <option value="none">Chọn vùng quốc gia</option>
+            <option value="Châu phi">Châu phi</option>
+            <option value="Châu Á">Châu Á</option>
+            <option value="Châu Âu">Châu Âu</option>
+            <option value="Bắc Mỹ">Bắc Mỹ</option>
+            <option value="Nam Mỹ">Nam Mỹ</option>
+            <option value="Châu Đại Dương">Châu Đại Dương</option>
           </select>
-
           <h2>Ghi chú</h2>
-          <input type="text" name="" id="Note-box" />
-          <button onclick="notnull()">Đăng ký</button>
+          <div class="Note-box-style">
+            <textarea
+              id="Note-box"
+              maxlength="200"
+              onkeyup="updateCount()"
+            ></textarea>
+            <p id="count">Kí tự: 0/200.</p>
+          </div>
+          <button
+            onclick=" notnull();
+          validateEmail();
+          checkboxsex();
+          checkboxhobby();
+          checkRegion();"
+          >
+            Đăng ký
+          </button>
         </div>
       </div>
     </div>
@@ -304,40 +338,11 @@
     </footer>
   </body>
   <script>
-    function notnull111() {
-      var msv = document.getElementById("spec-infor-1").value.trim();
-      var name = document.getElementById("spec-infor-2").value.trim();
-      var email = document.getElementById("spec-infor-3").value.trim();
-      var arr = "Mã sinh viên không được để trống !!!";
-      var valid = true;
-      if (msv == "") {
-        document
-          .getElementById("spec-infor-1")
-          .setAttribute("style", "border: 2px solid yellow;");
-        alert("Mã số sinh viên không được để trống !!!");
-        return false;
-      }
-      if (name == "") {
-        document
-          .getElementById("spec-infor-2")
-          .setAttribute("style", "border: 2px solid yellow;");
-        alert("Họ và tên không được để trống !!!");
-        return false;
-      }
-      if (email == "") {
-        document
-          .getElementById("spec-infor-2")
-          .setAttribute("style", "border: 2px solid yellow;");
-        alert("Email không được để trống !!!");
-      }
-      return valid;
-    }
     function notnull() {
-      var ids = ["spec-infor-1", "spec-infor-2", "spec-infor-3"]; // Mảng lưu trữ các id của các input
+      var ids = ["spec-infor-1", "spec-infor-2"]; // Mảng lưu trữ các id của các input
       var messages = [
         "Mã sinh viên không được để trống !!!",
         "Họ tên không được để trống !!!",
-        "Email không được để trống !!!",
       ]; // Mảng lưu trữ các thông báo lỗi tương ứng
       var valid = true; // Biến lưu kết quả của việc kiểm tra các input
       for (var i = 0; i < ids.length; i++) {
@@ -349,10 +354,63 @@
           alert(messages[i]); // Hiển thị thông báo lỗi
           valid = false; // Đặt biến valid thành false
         } else {
-          input.style.border = "1px solid black";
+          input.style.border = "1px solid black"; // nếu đã điền thì sẽ trở về màu ban đầu
         }
       }
       return valid; //Trả về biến valid
+    }
+    function validateEmail() {
+      var email = document.getElementById("spec-infor-3").value;
+      // Tạo một biểu thức chính quy cho email
+      var regex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/; // Kiểm tra xem chuỗi email có khớp với biểu thức chính quy hay không
+      var result = regex.test(String(email).toLowerCase());
+      if (result == false) {
+        alert("Email không hợp lệ !!!");
+        document.getElementById("spec-infor-3").style.border =
+          "2px solid yellow";
+      } else {
+        document.getElementById("spec-infor-3").style.border =
+          "1px solid black";
+      }
+      return result;
+    }
+    function checkboxsex() {
+      var resultNa = document.getElementById("check-box-Na");
+      var resultNu = document.getElementById("check-box-Nu");
+      var result = resultNa.checked || resultNu.checked;
+      if (result == false) {
+        alert("Bạn chưa check vào mục giới tính !!!");
+        document.getElementById("sex").style.border = "2px solid yellow";
+      } else {
+        document.getElementById("sex").style.border = "1px solid black";
+      }
+    }
+    function checkboxhobby() {
+      var result =
+        document.getElementById("check-1").checked ||
+        document.getElementById("check-2").checked ||
+        document.getElementById("check-3").checked ||
+        document.getElementById("check-4").checked ||
+        document.getElementById("check-5").checked;
+      if (result == false) {
+        alert("Bạn chưa check vào mục sở thích !!!");
+        document.getElementById("hobby").style.border = "2px solid yellow";
+      } else {
+        document.getElementById("hobby").style.border = "1px solid black";
+      }
+    }
+    function checkRegion() {
+      var region = document.getElementById("Selection").value; // Lấy giá trị của option được chọn
+      if (region == "none") {
+        alert("Bạn chưa chọn quốc gia !!!");
+        document.getElementById("Selection").style.border = "2px solid yellow";
+      } else {
+        document.getElementById("Selection").style.border = "1px solid black";
+      }
+    }
+    function updateCount() {
+      var length = document.getElementById("Note-box").value.length; // Lấy số lượng kí tự trong hàm textarea
+      document.getElementById("count").innerHTML = "Kí tự: " + length + "/200.";
     }
   </script>
 </html>
