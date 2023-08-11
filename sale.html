@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <title>HT-Cẩm nang du lịch</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link các icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- link icon title -->
+    <link
+      rel="stylesheet"
+      href="assets//fonts/fontawesome-free-6.4.0-web/css/all.min.css"
+    />
+    <link rel="icon" href="assets/image\favicon\android-icon-36x36.png" />
+    <!-- Link css -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Tinos:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .container {
+        width: 1110px;
+        height: 100vh;
+        max-width: calc(100% - 48px);
+        margin-left: auto;
+        margin-right: auto;
+        font-family: "Lato", sans-serif;
+        font-family: "Tinos", serif;
+      }
+      .head {
+        margin: auto;
+        padding: 30px 0 10px;
+        text-align: center;
+        font-size: 20px;
+      }
+      .head > select {
+        padding: 7px 40px;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      table,
+      tr,
+      th {
+        margin: 20px auto;
+        border: 1px solid black;
+      }
+      table {
+        font-size: 20px;
+        width: calc(100% - 500px);
+        height: 50vh;
+      }
+      table input {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <!-- Thanh công cụ -->
+      <header class="header">
+        <div class="grid header-hight">
+          <div class="header-navbar">
+            <ul class="header-navbar-list">
+              <li class="header-navbar-list-item">
+                <a href="index.html" class="header-navbar-list-item-link">
+                  Trang chủ
+                </a>
+              </li>
+              <li class="header-navbar-list-item">
+                <a href="#local" class="header-navbar-list-item-link"
+                  >Địa điểm</a
+                >
+              </li>
+              <li class="header-navbar-list-item">
+                <a href="#blog" class="header-navbar-list-item-link">Blog</a>
+              </li>
+            </ul>
+            <!--begin search -->
+            <div class="header-navbar-search">
+              <input
+                class="header-navbar-search-input"
+                type="Number"
+                textbox
+                placeholder="Tìm kiếm"
+              />
+              <button class="header-navbar-search-btn">
+                <i
+                  class="fa-solid fa-magnifying-glass"
+                  style="color: #ffffff"
+                ></i>
+              </button>
+            </div>
+            <!-- end search -->
+
+            <ul class="header-navbar-list">
+              <!-- begin thông báo -->
+              <li
+                class="header-navbar-list-item header-navbar-list-item-has-noti"
+              >
+                <a class="header-navbar-list-item-link">
+                  <i class="fa-solid fa-bell fa-beat"></i> Thông báo
+                </a>
+                <div class="header-noti">
+                  <ul class="header-noti-list triangle-bottom">
+                    <li class="header-noti-item">
+                      <a href="Blog_PhuYen.html" class="header-noti-item-link">
+                        <img
+                          src="assets/image/Phu_Yen_blog1.png"
+                          alt="Phú Yên"
+                          class="header-noti-img"
+                        />
+                        <div class="header-noti-infor">
+                          <p class="header-noti-name">Blog Phú Yên</p>
+                          <p class="header-noti-author">
+                            Tác giả: Phan Minh Hiển
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="header-noti-item header-noti-item-viewed">
+                      <a href="Blog_TaPao.html" class="header-noti-item-link">
+                        <img
+                          src="assets/image/Ta_Pao_blog1.jpg"
+                          alt="Ta Pao"
+                          class="header-noti-img"
+                        />
+                        <div class="header-noti-infor">
+                          <p class="header-noti-name">Blog Ta Pao</p>
+                          <p class="header-noti-author">
+                            Tác giả: Nguyễn Bình Trọng
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <footer class="header-noti-footer">
+                    <a href="" class="header-noti-footer-btn">Xem tất cả</a>
+                  </footer>
+                </div>
+              </li>
+              <!-- end thông báo -->
+              <!-- chưa đăng nhập -->
+              <li class="header-navbar-list-item">
+                <a
+                  href="login.html"
+                  class="header-navbar-list-item-link separate"
+                  >Đăng nhập</a
+                >
+              </li>
+              <li class="header-navbar-list-item">
+                <a href="register.html" class="header-navbar-list-item-link"
+                  >Đăng ký</a
+                >
+              </li>
+              <!-- đã đang nhập -->
+              <!-- <li class="header-navbar-list-item header-navbar-user">
+                            <img src="image/avatar.jpg" alt="avatar" class="user-img">
+                            <span class="user-name">Nguyễn Bình Trọng</span>
+                            
+                            <div class="header-user-menu">
+                                <ul class="user-menu">
+                                    <li class="user-menu-item">
+                                        <a href="" class="">Tài khoản của tôi</a>
+                                    </li>
+                                    <li class="user-menu-item">
+                                        <a href="">Đăng xuất</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> -->
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- container -->
+      <div class="container">
+        <div class="head">
+          <h1>BÁN HÀNG</h1>
+          <select name="" id="select" onchange="filterTable()">
+            <option value="">Mức giá</option>
+            <option value="600">Cao Cấp</option>
+            <option value="200">Phổ Thông</option>
+            <option value="0">Thấp</option>
+          </select>
+        </div>
+        <hr />
+        <table id="table">
+          <tr>
+            <th>
+              <input type="checkbox" checked onchange="daott(this)" />
+            </th>
+            <th>Hàng hóa</th>
+            <th>Đơn giá</th>
+            <th>Số lượng</th>
+            <th>Thành tiền</th>
+          </tr>
+          <tr>
+            <th>
+              <input type="checkbox" checked onchange="daott(this)" />
+            </th>
+            <th>iPhone 8</th>
+            <th>700</th>
+            <th>
+              <input type="Number" onkeyup="thanhtien(this);sumMoney()" />
+            </th>
+            <th id="sum"></th>
+          </tr>
+          <tr>
+            <th><input type="checkbox" checked onchange="daott(this)" /></th>
+            <th>Samsung</th>
+            <th>400</th>
+            <th>
+              <input type="Number" onkeyup="thanhtien(this);sumMoney()" />
+            </th>
+            <th id="sum"></th>
+          </tr>
+          <tr>
+            <th><input type="checkbox" checked onchange="daott(this)" /></th>
+            <th>Nokia</th>
+            <th>100</th>
+            <th>
+              <input type="Number" onkeyup="thanhtien(this);sumMoney()" />
+            </th>
+            <th id="sum"></th>
+          </tr>
+          <tr>
+            <th><input type="checkbox" checked onchange="daott(this)" /></th>
+            <th>Sony Xperia</th>
+            <th>450</th>
+            <th>
+              <input type="Number" onkeyup="thanhtien(this);sumMoney()" />
+            </th>
+            <th id="sum"></th>
+          </tr>
+          <tr>
+            <th><input type="checkbox" checked onchange="daott(this)" /></th>
+            <th>Motorola</th>
+            <th>180</th>
+            <th>
+              <input type="Number" onkeyup="thanhtien(this);sumMoney()" />
+            </th>
+            <th id="sum"></th>
+          </tr>
+          <tr>
+            <th><input type="checkbox" checked onchange="daott(this)" /></th>
+            <th>Oppo</th>
+            <th>600</th>
+            <th>
+              <input type="Number" onkeyup="thanhtien(this);sumMoney()" />
+            </th>
+            <th id="sum"></th>
+          </tr>
+          <tr>
+            <th><input type="checkbox" checked onchange="daott(this)" /></th>
+            <th>bPhone</th>
+            <th>90</th>
+            <th>
+              <input type="Number" onkeyup="thanhtien(this);sumMoney()" />
+            </th>
+            <th id="sum"></th>
+          </tr>
+          <tr>
+            <th colspan="4">TỔNG</th>
+            <th id="summoney"></th>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer id="footer">
+      <a class="footer-back-top" href="#"><button>Trở về đầu trang</button></a>
+      <div class="footer">
+        <div class="footer-lefft">
+          <p class="footer-title">
+            CÔNG TY TNHH KẾT NÔI TRUYỀN THÔNG QUẢNG CÁO DU LỊCH VIỆT NAM
+          </p>
+          <p>
+            Giấy phép số 06/GP-CBC do Cục Báo chí, Bộ TTTT cấp ngày 18.06.2018
+            <br />
+            Tổng Biên tập: PHAN MINH HIỂN
+          </p>
+          <p>
+            Địa chỉ liên hệ: <br />
+            Số 06, Phạm Văn Bạch, phường 15, quận Bình Thạnh, TP.HCM
+          </p>
+        </div>
+        <div class="footer-right">
+          <p>Thông tin liên hệ:</p>
+          <a href="https://www.facebook.com">
+            <i class="fa-brands fa-facebook"></i>
+            <p>https://www.facebook.com/cannangdulich</p>
+          </a>
+          <a href="https://twitter.com/home">
+            <i class="fa-brands fa-twitter"></i>
+            <p>https://twitter.com/camnangdulich</p>
+          </a>
+          <a href="camnangdulich@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+            <p>camnangdulich@gmail.com</p>
+          </a>
+
+          <a href="https://www.youtube.com">
+            <i class="fa-brands fa-youtube"></i>
+            <p>https://www.youtube.com/channel/cannangdulich</p>
+          </a>
+          <p>
+            Quảng cáo: <br />
+            (+84 24) 35353579 (online)<br />
+          </p>
+          <p>Đường dây nóng: 096 8383838 * Bạn đọc: (+84 24) 35353579</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    var optionSelect = document.getElementById("select");
+    var table = document.getElementById("table");
+    function filterTable() {
+      var rows = table.getElementsByTagName("tr");
+      var value = optionSelect.value;
+      for (var i = 1; i < rows.length; i++) {
+        var price = rows[i].cells[2].innerHTML;
+        // nếu không có lựa chọn thì hiện tất cả
+        if (value == "") {
+          rows[i].style.display = "";
+        } else if (value == "200") {
+          // nếu chọn phổ thông hiện 200 - 600
+          if (price >= 200 && price < 600) {
+            rows[i].style.display = "";
+          } else {
+            rows[i].style.display = "none";
+          }
+        } else if (value == "0") {
+          // nếu chọn thấp thì 0 - 200
+          if (price <= 199) {
+            rows[i].style.display = "";
+          } else {
+            rows[i].style.display = "none";
+          }
+        } else if (value == "600") {
+          if (price >= 600) {
+            rows[i].style.display = "";
+          } else {
+            rows[i].style.display = "none";
+          }
+        } else {
+          rows[i].style.display = "none";
+        }
+      }
+    }
+    function daott(obj, type) {
+      var row = obj.parentElement.parentElement;
+      var tbx = row.getElementsByTagName("input");
+      for (var i = 0; i < tbx.length; i++) {
+        var inputType = tbx[i].getAttribute("type");
+        if (inputType == "Number") {
+          tbx[i].value = "";
+          tbx[i].disabled = !tbx[i].disabled;
+          row.cells[4].innerHTML = "";
+          sumMoney();
+        }
+      }
+      return;
+    }
+    function thanhtien(obj) {
+      // Lấy hàng chứa obj
+      var row = obj.parentNode.parentNode;
+      // Lấy giá trị của ô đơn giá và chuyển đổi sang kiểu số
+      var sotien = Number(row.cells[2].innerHTML);
+      // Lấy giá trị của ô số lượng và chuyển đổi sang kiểu số
+      var soluong = Number(obj.value);
+      // Tính thành tiền bằng cách nhân đơn giá với số lượng
+      var tienthanh = sotien * soluong;
+      // Gán giá trị cho ô thành tiền và chuyển đổi sang kiểu chuỗi
+      row.cells[4].innerHTML = Number(tienthanh);
+    }
+    // Hàm để tính tổng tiền
+    f; // Hàm để tính tổng tiền
+    function sumMoney() {
+      // Biến để lưu trữ tổng tiền
+      let total = 0;
+      // Lấy bảng từ HTML
+      let table = document.getElementById("table");
+      // Lặp qua các hàng trong bảng, bỏ qua hàng đầu tiên và hàng cuối cùng
+      for (let i = 1; i < table.rows.length - 1; i++) {
+        // Lấy số lượng từ cột thứ 4
+        let quantity = table.rows[i].cells[3].children[0].value;
+        // Lấy đơn giá từ cột thứ 3
+        let price = table.rows[i].cells[2].innerHTML;
+        // Nhân số lượng với đơn giá và cộng vào tổng tiền
+        total += quantity * price;
+      }
+      // Hiển thị tổng tiền ở hàng cuối cùng của bảng
+      document.getElementById("summoney").innerHTML = total;
+    }
+  </script>
+</html>
