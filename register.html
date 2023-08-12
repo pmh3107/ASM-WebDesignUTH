@@ -20,12 +20,15 @@
     <link rel="icon" href="assets/image\favicon\android-icon-36x36.png" />
     <!-- Link css -->
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/ASM2.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Tinos:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- link Js -->
+    <script type="text/javascript" src="assets/Javascript/register.js"></script>
     <style>
       .container {
         display: flex;
@@ -37,73 +40,8 @@
         margin-right: auto;
         font-family: "Lato", sans-serif;
         font-family: "Tinos", serif;
-      }
-      h1 {
-        padding: 20px 0 10px;
-        font-size: 30px;
-      }
-      h2 {
-        margin: 10px 2px 5px;
-        font-size: 15px;
-      }
-      p {
-        font-size: 13px;
-        margin-right: 6px;
-      }
-      .input-box {
-        width: 340px;
-        height: 25px;
-        border: 1px solid black;
-        border-radius: 5px;
-      }
-      .Note-box-style > textarea {
-        border-radius: 5px;
-        font-size: 15px;
-        border: 1px solid black;
-        width: 340px;
-        height: 70px;
-        overflow-y: scroll;
-        font-family: "Lato", sans-serif;
-        font-family: "Tinos", serif;
-      }
-      .container-check {
-        width: 340px;
-        height: 40px;
-        border-radius: 5px;
-        padding: 1px 2px;
-        border: 1px solid black;
-      }
-      .Note-box-style > p {
-        margin: 0;
-        padding-left: 270px;
-      }
-      .container-select {
-        padding: 1px 2px;
-        border: 1px solid black;
-        width: 345px;
-        height: 40px;
-        border-radius: 5px;
-      }
-      .container button {
-        display: block;
-        margin: 20px 0;
-        width: 100px;
-        height: 40px;
-        border-radius: 999px;
-        border: none;
-        background-color: #484848;
-        background-image: linear-gradient(
-          90deg,
-          #484848 0%,
-          #bebebe 50%,
-          #484848 100%
-        );
-      }
-      .container button:hover {
-        opacity: 0.5;
-      }
-      .container .container-check {
-        display: flex;
+        background-image: url(assets/image/background-plane.jpg);
+        background-size: cover;
       }
     </style>
   </head>
@@ -126,6 +64,11 @@
               </li>
               <li class="header-navbar-list-item">
                 <a href="#blog" class="header-navbar-list-item-link">Blog</a>
+              </li>
+              <li class="header-navbar-list-item">
+                <a href="index.html#ASM2" class="header-navbar-list-item-link"
+                  >ASM2</a
+                >
               </li>
             </ul>
             <!--begin search -->
@@ -337,80 +280,4 @@
       </div>
     </footer>
   </body>
-  <script>
-    function notnull() {
-      var ids = ["spec-infor-1", "spec-infor-2"]; // Mảng lưu trữ các id của các input
-      var messages = [
-        "Mã sinh viên không được để trống !!!",
-        "Họ tên không được để trống !!!",
-      ]; // Mảng lưu trữ các thông báo lỗi tương ứng
-      var valid = true; // Biến lưu kết quả của việc kiểm tra các input
-      for (var i = 0; i < ids.length; i++) {
-        // Vòng lặp for duyệt qua các id
-        var input = document.getElementById(ids[i]); // Lấy input theo id
-        if (input.value.trim() == "") {
-          // Kiểm tra xem input có để trống hay không
-          input.style.border = "2px solid yellow"; // Thiết lập màu nền cho input là vàng
-          alert(messages[i]); // Hiển thị thông báo lỗi
-          valid = false; // Đặt biến valid thành false
-        } else {
-          input.style.border = "1px solid black"; // nếu đã điền thì sẽ trở về màu ban đầu
-        }
-      }
-      return valid; //Trả về biến valid
-    }
-    function validateEmail() {
-      var email = document.getElementById("spec-infor-3").value;
-      // Tạo một biểu thức chính quy cho email
-      var regex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/; // Kiểm tra xem chuỗi email có khớp với biểu thức chính quy hay không
-      var result = regex.test(String(email).toLowerCase());
-      if (result == false) {
-        alert("Email không hợp lệ !!!");
-        document.getElementById("spec-infor-3").style.border =
-          "2px solid yellow";
-      } else {
-        document.getElementById("spec-infor-3").style.border =
-          "1px solid black";
-      }
-      return result;
-    }
-    function checkboxsex() {
-      var resultNa = document.getElementById("check-box-Na");
-      var resultNu = document.getElementById("check-box-Nu");
-      var result = resultNa.checked || resultNu.checked;
-      if (result == false) {
-        alert("Bạn chưa check vào mục giới tính !!!");
-        document.getElementById("sex").style.border = "2px solid yellow";
-      } else {
-        document.getElementById("sex").style.border = "1px solid black";
-      }
-    }
-    function checkboxhobby() {
-      var result =
-        document.getElementById("check-1").checked ||
-        document.getElementById("check-2").checked ||
-        document.getElementById("check-3").checked ||
-        document.getElementById("check-4").checked ||
-        document.getElementById("check-5").checked;
-      if (result == false) {
-        alert("Bạn chưa check vào mục sở thích !!!");
-        document.getElementById("hobby").style.border = "2px solid yellow";
-      } else {
-        document.getElementById("hobby").style.border = "1px solid black";
-      }
-    }
-    function checkRegion() {
-      var region = document.getElementById("Selection").value; // Lấy giá trị của option được chọn
-      if (region == "none") {
-        alert("Bạn chưa chọn quốc gia !!!");
-        document.getElementById("Selection").style.border = "2px solid yellow";
-      } else {
-        document.getElementById("Selection").style.border = "1px solid black";
-      }
-    }
-    function updateCount() {
-      var length = document.getElementById("Note-box").value.length; // Lấy số lượng kí tự trong hàm textarea
-      document.getElementById("count").innerHTML = "Kí tự: " + length + "/200.";
-    }
-  </script>
 </html>
