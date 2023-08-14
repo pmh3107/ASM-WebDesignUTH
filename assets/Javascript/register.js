@@ -70,3 +70,24 @@ function updateCount() {
   var length = document.getElementById("Note-box").value.length; // Lấy số lượng kí tự trong hàm textarea
   document.getElementById("count").innerHTML = "Kí tự: " + length + "/200.";
 }
+
+function Checkpass() {
+  var pass1 = document.getElementById("pass-1").value;
+  var pass2 = document.getElementById("pass-2").value;
+  console.log(pass1);
+  console.log(pass2);
+  if (pass1 == "") {
+    alert("Mật khẩu không được để trống");
+    document.getElementById("pass-1").style.backgroundColor = "yellow";
+    document.getElementById("pass-2").style.backgroundColor = "yellow";
+  } else {
+    if (pass1 != pass2) {
+      alert("Mật khẩu không khớp !!!");
+      document.getElementById("pass-1").style.backgroundColor = "yellow";
+      document.getElementById("pass-2").style.backgroundColor = "yellow";
+    } else {
+      document.getElementById("pass-1").style.backgroundColor = "white";
+      document.getElementById("pass-2").style.backgroundColor = "white";
+    }
+  }
+}
