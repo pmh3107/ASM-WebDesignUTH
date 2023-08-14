@@ -57,10 +57,9 @@ function thanhtien(obj) {
   // Tính thành tiền bằng cách nhân đơn giá với số lượng
   var tienthanh = sotien * soluong;
   // Gán giá trị cho ô thành tiền và chuyển đổi sang kiểu chuỗi
-  row.cells[4].innerHTML = Number(tienthanh);
+  row.cells[4].innerHTML = "$" + Number(tienthanh);
 }
 // Hàm để tính tổng tiền
-f; // Hàm để tính tổng tiền
 function sumMoney() {
   // Biến để lưu trữ tổng tiền
   let total = 0;
@@ -76,5 +75,5 @@ function sumMoney() {
     total += quantity * price;
   }
   // Hiển thị tổng tiền ở hàng cuối cùng của bảng
-  document.getElementById("summoney").innerHTML = total;
+  document.getElementById("summoney").innerHTML = "$" + total;
 }

@@ -24,7 +24,7 @@
 }
 .container table {
   font-size: 20px;
-  width: calc(100% - 500px);
+  width: calc(100% - 400px);
   height: 50vh;
 }
 .container table input {
@@ -105,4 +105,53 @@
 }
 .register .container-check {
   display: flex;
+}
+
+/* CSS pic - ac */
+.pic-ac h1 {
+  text-align: center;
+  font-size: 35px;
+  padding: 30px;
+  font-family: "Lato", sans-serif;
+  font-family: "Merriweather", serif;
+}
+.pic-ac .slideshow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 5px;
+}
+.pic-ac .slideshow > img {
+  display: block;
+  width: 700px;
+  height: 500px;
+  border-radius: 10px;
+}
+.pic-ac .slideshow button {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  color: #ddd;
+  background-color: rgba(133, 133, 133, 0.5);
+}
+.pic-ac h2 {
+  text-align: center;
+  font-size: 25px;
+  padding: 10px;
+  margin-bottom: 30px;
+  font-family: "Lato", sans-serif;
+  font-family: "Merriweather", serif;
+}
+.pic-ac button:hover {
+  background-color: #ddd;
+  color: black;
+}
+.pic-ac .next-btn {
+  transform: translateX(-60px);
+}
+.pic-ac .pre-btn {
+  transform: translate(60px);
 }

@@ -20,6 +20,7 @@
     <link rel="icon" href="assets/image\favicon\android-icon-36x36.png" />
     <!-- Link css -->
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/ASM2.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,53 +37,6 @@
         max-width: calc(100% - 48px);
         margin-left: auto;
         margin-right: auto;
-      }
-      h1 {
-        text-align: center;
-        font-size: 35px;
-        padding: 30px;
-        font-family: "Lato", sans-serif;
-        font-family: "Merriweather", serif;
-      }
-      .slideshow {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto 5px;
-      }
-      .slideshow > img {
-        display: block;
-        width: 700px;
-        height: 500px;
-        border-radius: 10px;
-      }
-      .slideshow button {
-        text-decoration: none;
-        display: inline-block;
-        text-align: center;
-        height: 60px;
-        width: 60px;
-        border-radius: 50%;
-        color: #ddd;
-        background-color: rgba(133, 133, 133, 0.5);
-      }
-      .container h2 {
-        text-align: center;
-        font-size: 25px;
-        padding: 10px;
-        margin-bottom: 30px;
-        font-family: "Lato", sans-serif;
-        font-family: "Merriweather", serif;
-      }
-      .container button:hover {
-        background-color: #ddd;
-        color: black;
-      }
-      .container .next-btn {
-        transform: translateX(-60px);
-      }
-      .container .pre-btn {
-        transform: translate(60px);
       }
     </style>
   </head>
@@ -220,13 +174,15 @@
       </header>
       <!-- container -->
       <div class="container">
-        <h1>BỘ SƯU TẬP ẢNH</h1>
-        <div class="slideshow">
-          <button id="previousBtn" class="pre-btn">Pre</button>
-          <img id="image" src="assets/image/Da_lat_blog1.jpg" />
-          <button id="nextBtn" class="next-btn">Next</button>
+        <div class="pic-ac">
+          <h1>BỘ SƯU TẬP ẢNH</h1>
+          <div class="slideshow">
+            <button id="previousBtn" class="pre-btn">Pre</button>
+            <img id="image" src="assets/image/Da_lat_blog1.jpg" />
+            <button id="nextBtn" class="next-btn">Next</button>
+          </div>
+          <h2 id="count">Hình ảnh: 1/20</h2>
         </div>
-        <h2 id="count">Hình ảnh: 1/20</h2>
       </div>
       <!-- footer -->
       <footer id="footer">
