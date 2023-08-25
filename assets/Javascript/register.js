@@ -1,10 +1,10 @@
+var valid = true; // Biến lưu kết quả của việc kiểm tra các input
 function notnull() {
   var ids = ["spec-infor-1", "spec-infor-2"]; // Mảng lưu trữ các id của các input
   var messages = [
     "Mã sinh viên không được để trống !!!",
     "Họ tên không được để trống !!!",
   ]; // Mảng lưu trữ các thông báo lỗi tương ứng
-  var valid = true; // Biến lưu kết quả của việc kiểm tra các input
   for (var i = 0; i < ids.length; i++) {
     // Vòng lặp for duyệt qua các id
     var input = document.getElementById(ids[i]); // Lấy input theo id
@@ -15,6 +15,7 @@ function notnull() {
       valid = false; // Đặt biến valid thành false
     } else {
       input.style.backgroundColor = "white"; // nếu đã điền thì sẽ trở về màu ban đầu
+      valid = true;
     }
   }
   return valid; //Trả về biến valid
@@ -27,10 +28,12 @@ function validateEmail() {
   if (result == false) {
     alert("Email không hợp lệ !!!");
     document.getElementById("spec-infor-3").style.backgroundColor = " yellow";
+    valid = false;
   } else {
     document.getElementById("spec-infor-3").style.backgroundColor = "white";
+    valid = true;
   }
-  return result;
+  return valid;
 }
 function checkboxsex() {
   var resultNa = document.getElementById("check-box-Na");
@@ -39,9 +42,12 @@ function checkboxsex() {
   if (result == false) {
     alert("Bạn chưa check vào mục giới tính !!!");
     document.getElementById("sex").style.backgroundColor = " yellow";
+    valid = false;
   } else {
     document.getElementById("sex").style.backgroundColor = "white";
+    valid = true;
   }
+  return valid;
 }
 function checkboxhobby() {
   var result =
@@ -53,18 +59,24 @@ function checkboxhobby() {
   if (result == false) {
     alert("Bạn chưa check vào mục sở thích !!!");
     document.getElementById("hobby").style.backgroundColor = " yellow";
+    valid = false;
   } else {
     document.getElementById("hobby").style.backgroundColor = "white";
+    valid = true;
   }
+  return valid;
 }
 function checkRegion() {
   var region = document.getElementById("Selection").value; // Lấy giá trị của option được chọn
   if (region == "none") {
     alert("Bạn chưa chọn quốc gia !!!");
     document.getElementById("Selection").style.backgroundColor = " yellow";
+    valid = false;
   } else {
     document.getElementById("Selection").style.backgroundColor = "white";
+    valid = true;
   }
+  return valid;
 }
 function updateCount() {
   var length = document.getElementById("Note-box").value.length; // Lấy số lượng kí tự trong hàm textarea
@@ -80,14 +92,75 @@ function Checkpass() {
     alert("Mật khẩu không được để trống");
     document.getElementById("pass-1").style.backgroundColor = "yellow";
     document.getElementById("pass-2").style.backgroundColor = "yellow";
+    valid = false;
   } else {
     if (pass1 != pass2) {
       alert("Mật khẩu không khớp !!!");
       document.getElementById("pass-1").style.backgroundColor = "yellow";
       document.getElementById("pass-2").style.backgroundColor = "yellow";
+      valid = false;
     } else {
       document.getElementById("pass-1").style.backgroundColor = "white";
       document.getElementById("pass-2").style.backgroundColor = "white";
+      valid = true;
     }
   }
+  return valid;
 }
+
+function validateAll() {
+  // Gọi các hàm khác trong hàm này
+
+  notnull();
+  validateEmail();
+  checkboxsex();
+  checkboxhobby();
+  checkRegion();
+  Checkpass();
+}
+
+function validateForm() {
+  var valid = true;
+  valid = notnull() && valid;
+  valid = validateEmail() && valid;
+  valid = checkboxsex() && valid;
+  valid = checkboxhobby() && valid;
+  valid = checkRegion() && valid;
+  valid = Checkpass() && valid;
+  return valid;
+}
+
+function checktosubmit() {
+  var button = document.getElementById("submit-btn"); // Lấy button theo id
+  // Hàm xử lý sự kiện click của button
+  valid = validateForm() && valid; // Gọi hàm kiểm tra lỗi và lưu kết quả vào biến valid
+  console.log(valid);
+  if (valid == true) {
+    // Nếu không có lỗi
+    button.setAttribute("type", "submit"); // Thay đổi type của button thành submit
+    button.click(); // Gọi lại sự kiện click của button để submit form
+  } else {
+    // Nếu có lỗi
+    alert("Vui lòng sửa các lỗi trước khi gửi form"); // Hiển thị thông báo lỗi
+  }
+}
+
+// function checktosubmit() {
+//   // Lấy form theo class
+//   var form = document.querySelector(".register");
+//   form.addEventListener("submit", function (event)) ;
+//     // Gọi hàm validateAll () và lưu kết quả vào biến valid
+//     valid = validateForm() && valid; // Gọi hàm kiểm tra lỗi và lưu kết quả vào biến valid
+//     console.log(valid);
+//     if (valid == true) {
+//       // Nếu không có lỗi
+//       // Cho phép gửi form bình thường
+//     } else {
+//       // Nếu có lỗi
+//       // Ngăn chặn việc gửi form
+//       event.preventDefault();
+//       // Hiển thị thông báo lỗi
+//       alert("Vui lòng sửa các lỗi trước khi gửi form");
+//     }
+//   }
+// }
